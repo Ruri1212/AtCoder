@@ -1,3 +1,7 @@
+
+// スタックを使って管理するとO(N)で処理することが可能になる
+// また，string.size()はintを返すが，string.end()はイテレータを返すため違いに注意
+
 #include <iostream>
 #include <algorithm>
 using namespace std;
@@ -5,15 +9,18 @@ using namespace std;
 
 int main() {   
 
-    char S[30009];
+    string S,ans;
 
-    for (int i=1;i<=200009;i++) cin >> S[i];
+    cin >> S;
 
-    for (int i=1;i<=200009;i++) {
-        if (S[i] == string(A) && S[i+1] == "B" && S[i+2] == "C") {
-
-        }
+    for (auto &c : S){
+        ans += c;
+        if(ans.size() >= 3 && ans.substr(ans.size()-3)=="ABC") {
+            ans.erase(ans.size()-3,ans.size());
+        }        
     }
+    cout << ans << endl;
+
 
     return 0;
 }
