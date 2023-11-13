@@ -1,3 +1,7 @@
+
+//雪が降った区間に単純にX[i]を足しこむ
+//最悪の場合，O(N^2)になるため，TLEになる
+
 #include <iostream>
 #include <algorithm>
 using namespace std;
