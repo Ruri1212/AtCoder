@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "download contest",
+            "type": "shell",
+            "command": ". /workspace/.venv/bin/activate && acc new ${input:ContestID} && cd ${input:ContestID} && for d in */; do if [ -d \"$d\" ]; then cd \"$d\" && touch main.py; cd ..; fi; done"            
+        },
+        {
+            "label": "test code",
+            "type": "shell",
+            "command": "cd $(ls -d */ | tail -n 1)${input:problemID} && oj t -d tests -c  \"python3 main.py\"",
+        }
+    ],
+    "inputs": [
+        {
+            "type": "promptString",
+            "id": "ContestID",
+            "description": "Enter the contest ID",
+            "default": "abc001"
+        },
+        {
+            "type": "promptString",
+            "id": "problemID",
+            "description": "Enter the problem ID"
+        }
+    ]
+}

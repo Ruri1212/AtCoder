@@ -1,0 +1,28 @@
+{
+    "name": "atcoder",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "workspace",
+    "workspaceFolder": "/workspace",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-python.python",
+          "streetsidesoftware.code-spell-checker",
+          "ms-vscode-remote.remote-containers",
+          "ms-azuretools.vscode-docker",
+          "batisteo.vscode-django",
+          "usernamehw.errorlens",
+          "mhutchie.git-graph",
+          "GitHub.copilot",
+          "GitHub.copilot-chat",
+          "seatonjiang.gitmoji-vscode",
+          "oderwat.indent-rainbow",
+          "VisualStudioExptTeam.vscodeintellicode",
+          "MS-CEINTL.vscode-language-pack-ja",
+          "donjayamanne.python-extension-pack",
+          "ms-python.vscode-pylance",
+          "SanaAjani.taskrunnercode"
+        ]
+      }
+    }
+  }
